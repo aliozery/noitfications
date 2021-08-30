@@ -1,0 +1,14 @@
+{
+  "name": "noitfications",
+  "version": "1.0.0",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "sockjs": "^0.3.21",
+    "stompjs": "^2.3.3"
+  },
+  "devDependencies": {
+    "@stomp/stompjs": "^6.1.1",
+    "sockjs-client": "^1.5.2",
+    "ws": "^8.2.1"
+  }
+}
