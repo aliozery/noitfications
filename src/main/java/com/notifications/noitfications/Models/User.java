@@ -1,17 +1,35 @@
 package com.notifications.noitfications.Models;
 
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+import javax.persistence.*;
+
+
+@Entity
+@Table(name = "myuser")
+@Getter@Setter@NoArgsConstructor @ToString
 public class User {
+    @Id
+    @SequenceGenerator(
+            name="user_sequence",
+            sequenceName="user_sequence",
+            allocationSize =1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "user_sequence"
+    )
+    private Long id;
 
     private String name;
+    private String password;
 
-    public User() {
-    }
-
-    public User(String name) {
+    public User(String name, String password) {
         this.name = name;
-    }
-
-    public String getName() {
-        return name;
+        this.password = password;
     }
 }
