@@ -41,7 +41,6 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/api/*").authenticated()
                 .antMatchers("/logout").permitAll()
                 .anyRequest().authenticated()
                 .and()
