@@ -54,6 +54,17 @@ function send_individual(){
     });
 }
 
+function send_bc(){
+    $.ajax({
+        type: 'POST',
+        url: '/api/pushNotification/broadcastEmail',
+        data: JSON.stringify ({emails: [$("#email_bc").val(), $("#email_bc2").val(), $("#email_bc3").val()], message: $("#message_bc").val()}),
+        success: function() { alert('successfully'); },
+        contentType: "application/json",
+        dataType: 'json'
+    });
+}
+
 
 $(document).ready(function () {
     $("form").on('submit', function (e) {
@@ -63,4 +74,6 @@ $(document).ready(function () {
     $( "#disconnect" ).click(function() { disconnect(); });
     $( "#send" ).click(function() { sendName(); });
     $( "#send_individual" ).click(function() { send_individual(); });
+    $( "#send_bc" ).click(function() { send_bc(); });
+
 });

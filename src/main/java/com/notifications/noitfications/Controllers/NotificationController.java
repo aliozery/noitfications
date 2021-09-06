@@ -50,7 +50,7 @@ public class NotificationController {
 //    }
 
 
-    @RequestMapping(value = "/broadcastEmail", method = RequestMethod.POST)
+    @PostMapping (value = "/broadcastEmail", consumes = "application/json")
     public String sendBroadcastEmail(@RequestBody BroadcastMessage req){
 //        List <String> emails= req.getEmails();
 //        String message= req.getMessage();
