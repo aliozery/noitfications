@@ -1,5 +1,6 @@
 package com.notifications.noitfications.Services;
 import com.notifications.noitfications.Config.QueueConfig;
+import com.notifications.noitfications.Models.BroadcastMessage;
 import com.notifications.noitfications.Models.IndividualMessage;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Controller;
@@ -78,6 +79,13 @@ public class EmailNotificationService {
     @RabbitListener(queues = QueueConfig.QUEUE)
     public void helper_individual_email(IndividualMessage individualMessage){
         userNotification(individualMessage.getEmail(), individualMessage.getMessage(), individualMessage.getSubject());
+    }
+
+    @RabbitListener(queues = QueueConfig.QUEUE_BC)
+    public void helper_broadcast_message(BroadcastMessage bc){
+        List <String> emails= bc.getEmails();
+        String message= bc.getMessage();
+        broadcastEmail(emails, message);;
     }
 
     //Send individual message to single user (EMAIL)
