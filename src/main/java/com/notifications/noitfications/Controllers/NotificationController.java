@@ -62,7 +62,7 @@ public class NotificationController {
 
 
 //    @RequestMapping(value = "/broadcastEmail", method = RequestMethod.POST)
-//    public void sendBroadcastEmail(@RequestBody BroadcastMessage req){
+//    public void sendBroadcastEmail(@RequestBody BroadcastMessage req){        //Without RabbitMQ (Communicate directly with service)
 //        List <String> emails= req.getEmails();
 //        String message= req.getMessage();
 //        emailNotificationService.broadcastEmail(emails, message);

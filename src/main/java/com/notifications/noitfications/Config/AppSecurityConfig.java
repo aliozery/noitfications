@@ -54,12 +54,4 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
                 .logoutSuccessUrl("/login")
                 .and().csrf().disable();
     }
-//    @Bean
-//    @Override
-//    protected UserDetailsService userDetailsService(){
-//        List<UserDetails> users= new ArrayList<>();
-//        users.add(User.withDefaultPasswordEncoder().username("user1").password("1234").roles("USER").build());
-//
-//        return new InMemoryUserDetailsManager(users);
-//    }
 }

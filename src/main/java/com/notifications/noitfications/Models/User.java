@@ -1,17 +1,16 @@
 package com.notifications.noitfications.Models;
 
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 
 
 @Entity
 @Table(name = "myuser")
-@Getter@Setter@NoArgsConstructor @ToString
+@Data
+@NoArgsConstructor
+@ToString
 public class User {
     @Id
     @SequenceGenerator(

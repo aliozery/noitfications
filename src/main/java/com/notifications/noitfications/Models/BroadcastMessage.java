@@ -1,14 +1,13 @@
 package com.notifications.noitfications.Models;
 
 import com.fasterxml.jackson.annotation.JsonAnySetter;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.util.List;
 
-@Setter @Getter @NoArgsConstructor @ToString
+@Data
+@NoArgsConstructor
+@ToString
 public class BroadcastMessage {
 
     List<String> emails;

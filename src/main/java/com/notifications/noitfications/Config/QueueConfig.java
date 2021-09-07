@@ -13,6 +13,8 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.servlet.http.PushBuilder;
 
+//Configures the individual message and broadcast queues, their corresponding routing keys, and the Exchange
+
 @Configuration
 public class QueueConfig {
 

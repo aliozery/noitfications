@@ -75,12 +75,13 @@ public class EmailNotificationService {
         }
     }
 
-
+    //Listener for the queue "QUEUE" containing individual message requests
     @RabbitListener(queues = QueueConfig.QUEUE)
     public void helper_individual_email(IndividualMessage individualMessage){
         userNotification(individualMessage.getEmail(), individualMessage.getMessage(), individualMessage.getSubject());
     }
 
+    //Listener for the queue "QUEUE" containing broadcast message requests
     @RabbitListener(queues = QueueConfig.QUEUE_BC)
     public void helper_broadcast_message(BroadcastMessage bc){
         List <String> emails= bc.getEmails();
