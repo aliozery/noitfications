@@ -20,9 +20,21 @@
     body {
         background-color: powderblue;
     }
+    div{
+        width:40%;
+        height: 20%;
+    }
     button{
-        color: aliceblue;
-        background: black;
+        background: teal;
+        color: black;
+        transition-duration: 0.4s;
+        border-radius: 4px;
+        font-size: 18px;
+    }
+    button:hover{
+        background-color: white;
+        color: teal;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     }
 </style>
 
@@ -49,7 +61,8 @@
 
 <!--    </div>-->
     <div class="col-md-6" style="float: left">
-        <header style="font-size: large; color: gold">Individual Message</header>
+        <header style="font-size: 25px; color: gold">Individual Message (Demo)</header>
+        <br>
         <form class="form-inline">
             <div class="form-group">
                 <label for="email">Enter Email</label>
@@ -83,22 +96,23 @@
 <!--    </div>-->
 </div>
 <div class="col-md-6" style="float: right">
-    <header style="font-size: large; color: gold">Broadcast Message</header>
+    <header style="font-size: 25px; color: gold">Broadcast Message (Demo)</header>
+    <br>
     <div class="form-group">
     <label for="email">Enter Email</label>
-    <input type="text" id="email_bc" class="form-control" placeholder="Email Here">
+    <input type="text" id="email_bc" class="form-control" placeholder="First Email Here">
     <br>
         <br>
     <label for="email">Enter Email</label>
-    <input type="text" id="email_bc2" class="form-control" placeholder="Email Here">
+    <input type="text" id="email_bc2" class="form-control" placeholder="Second Email Here">
     <br>
         <br>
     <label for="email">Enter Email</label>
-    <input type="text" id="email_bc3" class="form-control" placeholder="Email Here">
+    <input type="text" id="email_bc3" class="form-control" placeholder="Third Email Here">
     <br>
         <br>
         <label for="Message">Broadcast message</label>
-        <input type="text" id="message_bc" class="form-control" placeholder="Email Here">
+        <input type="text" id="message_bc" class="form-control" placeholder="Enter BC Message">
         <br>
         <br>
      </div>
