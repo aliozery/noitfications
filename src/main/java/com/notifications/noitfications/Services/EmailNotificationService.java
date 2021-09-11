@@ -57,8 +57,8 @@ public class EmailNotificationService {
             // Set From: header field of the header.
             message.setFrom(new InternetAddress(from));
             // Set To: header field of the header.
-            for(int i=0;i<emails.size();i++){
-                to= emails.get(i);
+            for (String email : emails) {
+                to = email;
                 message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
                 // Set Subject: header field
                 message.setSubject("Broadcast Message");
@@ -133,25 +133,4 @@ public class EmailNotificationService {
         
     }
 
-
-    //Testing only
-    public static void main(String[]args){
-        List<String> emails = new ArrayList<>();
-        emails.add("ali.ozery@gmail.com");
-        emails.add("ali.ozery2@gmail.com");
-        emails.add("ali.ozery3@gmail.com");
-        String message= "This is a Broadcast Message";
-
-
-        //
-        //make methods static if you test in this class only
-        //
-
-        // broadcastEmail(emails,message);
-
-        //userNotification(emails.get(0), "Individual message", "Subject Individual");
-
-
-
-    }
 }

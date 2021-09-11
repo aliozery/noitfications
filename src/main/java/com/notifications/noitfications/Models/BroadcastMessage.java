@@ -7,7 +7,6 @@ import java.util.List;
 
 @Data
 @NoArgsConstructor
-@ToString
 public class BroadcastMessage {
 
     List<String> emails;
